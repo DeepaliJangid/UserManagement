@@ -13,6 +13,10 @@ import { ToastrModule } from 'ngx-toastr';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
 import { AdduserComponent } from './Components/adduser/adduser.component'
+import { ApiService } from './Services/api.service';
+import { UserService } from './Services/user.service';
+import { HighlightDirective } from './Directives/highlight.directive';
+import { HoverDirective } from './Directives/hover.directive';
 
 
 
@@ -26,6 +30,8 @@ import { AdduserComponent } from './Components/adduser/adduser.component'
     LoginComponent,
     SignupComponent,
     AdduserComponent,
+    HighlightDirective,
+    HoverDirective,
     
     
   ],
@@ -49,7 +55,7 @@ import { AdduserComponent } from './Components/adduser/adduser.component'
       
     
   ],
-  providers: [],
+  providers: [ApiService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

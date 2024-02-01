@@ -1,9 +1,38 @@
 {
-    "signupusers":[
-        
-    ],
-
-    "addusers":[
-
-    ]
+  "signupusers": [
+    {
+      "id": "519e",
+      "username": "gfh",
+      "picture": null,
+      "bio": "gfvnb",
+      "interest": "gfvnb",
+      "role": null
+    },
+    {
+      "id": "8620",
+      "username": "dgf",
+      "picture": null,
+      "bio": "tfhbmn",
+      "interest": "tfhgjn",
+      "role": null
+    },
+    {
+      "id": "3ca0",
+      "username": "cvbn m",
+      "picture": null,
+      "bio": "vbmn, ",
+      "interest": "gvnbm ",
+      "role": null
+    }
+  ],
+  "users": [
+    {
+      "id": "4896",
+      "username": "xcvbnm",
+      "picture": null,
+      "bio": "cvnb ,",
+      "interest": "dxcvbnmdfvbnm,",
+      "role": null
+    }
+  ]
 }

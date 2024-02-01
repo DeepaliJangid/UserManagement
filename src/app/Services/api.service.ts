@@ -13,60 +13,16 @@ export class ApiService {
 
 
 
-  // User-related methods
-
-  // Method to post user data to the server
+  // Method to post user data to the server by Admin
   sendUser(data:any):Observable<any>{
     return this.http.post('https://localhost:3000/users',data);
   }
 
+  fetchUser(){
+  return this.http.get("https://localhost:3000/users");
+}
 
-  postUser(data: any): Observable<any> {
-    return this.http.post<any>('http://localhost:3000/users', data);
 
-  }
-
-  // Method to get user data from the server
-  getUser(): Observable<any> {
-    return this.http.get<any>('http://localhost:3000/users');
-  }
-
-  // Method to update user data on the server
-  updateUser(id: any, data: any): Observable<any> {
-    return this.http.put<any>('http://localhost:3000/users/' + id, data);
-  }
-
-  // Method to delete user data on the server
-  deleteUser(id: any): Observable<any> {
-    return this.http.delete<any>('http://localhost:3000/users/' + id);
-  }
-
-  // Method to get a specific user's data by ID from the server
-  getUserById(id: any): Observable<any> {
-    return this.http.get<any>('http://localhost:3000/users/' + id);
-  }
-
-  // Admin-related methods
-
-  // Method to post admin data to the server
-  postAdmin(data: any): Observable<any> {
-    return this.http.post<any>('http://localhost:3000/admin', data);
-  }
-
-  // Method to get admin data from the server
-  getAdmin(): Observable<any> {
-    return this.http.get<any>('http://localhost:3000/admin');
-  }
-
-  // Method to update admin data on the server
-  updateAdmin(id: number, data: any): Observable<any> {
-    return this.http.put<any>('http://localhost:3000/admin/' + id, data);
-  }
-
-  // Method to delete admin data on the server
-  deleteAdmin(id: number): Observable<any> {
-    return this.http.delete<any>('http://localhost:3000/admin/' + id);
-  }
 
   // Authentication-related methods
 

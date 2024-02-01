@@ -26,7 +26,8 @@ addUser= new FormGroup({
 });
 
 OnSubmit(){
-  this.api.sendUser(this.addUser.value)
+  debugger
+  this.service.postUser(this.addUser.value)
   .subscribe(
     ()=>{
       this.toastr.success("user sent successfully");
@@ -34,7 +35,7 @@ OnSubmit(){
       this.router.navigate(['/fetchedusers'])
     },
     (error)=>{
-      console.log(error);
+      console.error("Error");
       if(error.status===500){
         this.toastr.warning('Username already exists');
       }else{
