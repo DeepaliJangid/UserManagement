@@ -15,8 +15,6 @@ export class SignupComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, private http: HttpClient, private router: Router, private toastr: ToastrService) { }
   ngOnInit(): void {
     this.signupForm = this.formBuilder.group({
-      id: ['', Validators.required],
-      // user_type: ['', Validators.required],
       fullname: ['', Validators.required],
       bio: ['', Validators.required],
       email: ['', Validators.required],
@@ -25,7 +23,7 @@ export class SignupComponent implements OnInit {
   }
 
   signUp() {
-    this.http.post<any>("http://localhost:3000/users", this.signupForm.value)
+    this.http.post<any>("http://localhost:3000/signupusers", this.signupForm.value)
       .subscribe(res => {
         this.toastr.info("Signup Successfull")
         this.signupForm.reset();
