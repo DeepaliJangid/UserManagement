@@ -11,6 +11,8 @@ import { LoginComponent } from './Components/login/login.component';
 import { SignupComponent } from './Components/signup/signup.component';
 import { ToastrModule } from 'ngx-toastr';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http'
+
 
 
 @NgModule({
@@ -23,10 +25,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
     SignupComponent,
     
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
       ToastrModule.forRoot({
@@ -40,6 +44,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
         newestOnTop: true,
         toastClass:'toastr',
       }),
+      
     
   ],
   providers: [],
