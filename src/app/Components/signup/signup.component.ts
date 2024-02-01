@@ -15,6 +15,7 @@ export class SignupComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, private http: HttpClient, private router: Router, private toastr: ToastrService) { }
   ngOnInit(): void {
     this.signupForm = this.formBuilder.group({
+      user_type:['',Validators.required],
       fullname: ['', Validators.required],
       bio: ['', Validators.required],
       email: ['', Validators.required],
