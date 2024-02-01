@@ -1,0 +1,47 @@
+<div class="col-sm-8 mx-auto">
+    <div class="outer_container">
+    
+    <div class="container" align="center" >
+        <h3>Add User here.!!</h3>
+    </div>
+    
+    <br>
+    <br>
+    
+    <form class="container" [formGroup]="addUser">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">User's name</label>
+          <input type="text" 
+          class="form-control"
+           id="exampleInputEmail1" 
+           aria-describedby="emailHelp"
+           formControlName="username">  
+        </div>
+    
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Select Picture</label>
+            <input type="file" 
+            class="form-control"
+             id="exampleInputEmail1" 
+             aria-describedby="emailHelp"
+             formControlName="username">  
+          </div>
+
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Interest</label>
+          <input type="text" 
+          class="form-control"
+           id="exampleInputPassword1"
+           formControlName="interest">
+        </div>
+    
+        <div class="mb-3">
+            <label for="content" class="form-label">Bio</label>
+            <textarea type="textarea" style="height: 150px;" class="form-control" id="content" formControlName="bio"></textarea>
+          </div>
+    
+        
+        <button type="submit" (click)="OnSubmit()" class="btn btn-secondary">Add User</button>
+      </form>
+    </div>
+    </div>

@@ -11,7 +11,8 @@ import { LoginComponent } from './Components/login/login.component';
 import { SignupComponent } from './Components/signup/signup.component';
 import { ToastrModule } from 'ngx-toastr';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule} from '@angular/common/http'
+import { HttpClientModule} from '@angular/common/http';
+import { AdduserComponent } from './Components/adduser/adduser.component'
 
 
 
@@ -24,6 +25,7 @@ import { HttpClientModule} from '@angular/common/http'
     FetchedUsersComponent,
     LoginComponent,
     SignupComponent,
+    AdduserComponent,
     
     
   ],

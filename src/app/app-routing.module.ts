@@ -5,6 +5,7 @@ import { SignupComponent } from './Components/signup/signup.component';
 import { AboutComponent } from './Components/about/about.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';
 import { FetchedUsersComponent } from './Components/fetched-users/fetched-users.component';
+import { AdduserComponent } from './Components/adduser/adduser.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path:'about',component:AboutComponent, title:"About"},
   {path:'navbar',component:NavbarComponent, title:"Navbar"},
   {path:'fetchedusers',component:FetchedUsersComponent, title:"FetchedUsers"},
+  {path:'adduser',component:AdduserComponent}
 ];
 
 @NgModule({

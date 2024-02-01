@@ -16,6 +16,11 @@ export class ApiService {
   // User-related methods
 
   // Method to post user data to the server
+  sendUser(data:any):Observable<any>{
+    return this.http.post('https://localhost:3000/users',data);
+  }
+
+
   postUser(data: any): Observable<any> {
     return this.http.post<any>('http://localhost:3000/users', data);
 
