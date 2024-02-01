@@ -9,6 +9,8 @@ import { NavbarComponent } from './Components/navbar/navbar.component';
 import { FetchedUsersComponent } from './Components/fetched-users/fetched-users.component';
 import { LoginComponent } from './Components/login/login.component';
 import { SignupComponent } from './Components/signup/signup.component';
+import { ToastrModule } from 'ngx-toastr';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -24,7 +26,21 @@ import { SignupComponent } from './Components/signup/signup.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+      ToastrModule.forRoot({
+        timeOut: 10000,
+        positionClass: "toast-top-right",
+        preventDuplicates: true,
+        progressBar:true,
+        closeButton:true,
+        tapToDismiss:true,
+        progressAnimation:'increasing',
+        newestOnTop: true,
+        toastClass:'toastr',
+      }),
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
