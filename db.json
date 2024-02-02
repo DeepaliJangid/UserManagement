@@ -1,5 +1,13 @@
 {
-  "signupusers": [ ],
-  
-  "users": []
+  "signupusers": [],
+  "users": [
+    {
+      "id": "069c",
+      "username": null,
+      "picture": null,
+      "bio": null,
+      "interest": null,
+      "role": null
+    }
+  ]
 }

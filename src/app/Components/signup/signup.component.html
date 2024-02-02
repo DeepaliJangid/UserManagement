@@ -70,7 +70,7 @@
                                     is required</span>
                             </div>
                             <br>
-                            <button type="submit" [disabled]="!signupForm.valid" class="btn btn-primary mb-2">Sign Up</button>
+                            <button type="submit" [disabled]="signupForm.invalid" class="btn btn-primary mb-2">Sign Up</button>
                         </form>
                         <a style="color:black; margin-top: 10px;" routerLink="/login"> Already registered? Click here to
                             login.</a>
