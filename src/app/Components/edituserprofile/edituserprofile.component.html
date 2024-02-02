@@ -1,0 +1,21 @@
+<div>
+    <div id="mydiv">
+        <div id="outerdiv" class="col-sm-6 mx-auto container">
+            <div>
+                <h3><b>Profiles</b></h3>
+            </div>
+            <div *ngFor="let user of users" class="card mb-3 bg-warming p-3">
+                <p><b>User-name:</b> {{user.username}}</p>
+                <!-- <p><b>Profile-pic:</b>{{user.picture}}</p> -->
+                <img src="{{user.picture}}" alt="user image" height="100" width="70">
+
+
+                <p><b>Bio:</b>{{user.bio }}</p>
+
+
+                <p><b>Interest:</b>{{user.interest}}</p>
+                <button type="submit" class="btn btn-secondary">Add edited user</button>
+            </div>
+        </div>
+    </div>
+</div>

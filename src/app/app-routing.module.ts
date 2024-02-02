@@ -8,6 +8,7 @@ import { FetchedUsersComponent } from './Components/fetched-users/fetched-users.
 import { AdduserComponent } from './Components/adduser/adduser.component';
 import { authGuard } from './auth.guard';
 import { HomeComponent } from './Components/home/home.component';
+import { EdituserprofileComponent } from './Components/edituserprofile/edituserprofile.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path:'about',component:AboutComponent, title:"About"},
   {path:'navbar',component:NavbarComponent, title:"Navbar"},
   {path:'fetchedusers',component:FetchedUsersComponent, title:"FetchedUsers"},
-  {path:'adduser',component:AdduserComponent}
+  {path:'adduser',component:AdduserComponent},
+  {path:"edituserprofile",component:EdituserprofileComponent,canActivate:[authGuard]}
 ];
 
 @NgModule({

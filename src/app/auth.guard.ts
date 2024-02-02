@@ -1,25 +1,52 @@
-import { Injectable } from "@angular/core";
-import { AuthService } from "./auth.service";
-import { Observable } from "rxjs";
-import { Router, ActivatedRouteSnapshot,CanActivate,RouterStateSnapshot,UrlTree } from "@angular/router";
+import { Injectable } from '@angular/core';
+import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { ApiService } from 'src/app/Services/api.service';
+import { ToastrService } from 'ngx-toastr';
+ 
 @Injectable({
-    providedIn: 'root'
-    })
-    export class authGuard implements CanActivate{
-        constructor(private authService :AuthService, private router: Router){}
-
-        canActivate(
-            route: ActivatedRouteSnapshot, 
-            state: RouterStateSnapshot): Observable<boolean | UrlTree>| Promise<boolean | UrlTree> | boolean|UrlTree {
-            if(this.authService.IsAuthenticated())
-        {
-          return true;
+  providedIn: 'root'
+})
+export class authGuard implements CanActivate {
+ 
+  constructor(private router: Router,private service:ApiService, private toastr:ToastrService) { }
+ 
+  // user: any;
+ 
+  // //navigate the authenticated user to the login page on logout
+  // ngOnInit(): void {
+  //     this.user = this.service.userData;
+  // }
+  // isLoggedIn(){
+  //   return this.service.loggedIn;
+  // }
+ 
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): any {
+    if (this.service.IsAuthenticated()){
+      if (route.url.length>0){
+        let menu=route.url[0].path
+        if(menu=='edituserprofile'){
+          if(this.service.getUserRole()==='Admin'){
+            return true
+          }
+          else{
+            this.toastr.warning('You are not allowed as you are not admin')
+            this.router.navigate(['/login'])
+            return false
+          }
         }
         else{
-            alert('Please login as admin before you add user!!')
-          this.router.navigate(['login']);
-          return false;
+          return true
         }
-          }
-
+      }else{
+        return false
+      }
+ 
+    }
+    else {
+      this.router.navigate(['/login'])
+      return false;
+    }
+  }
 }
+ 

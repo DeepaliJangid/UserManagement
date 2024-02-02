@@ -3,10 +3,12 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f8f9fa;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/000/362/094/original/add-user-vector-icon.jpg');
   }
   
   .col-sm-8 {
     margin: 20px auto;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/000/362/094/original/add-user-vector-icon.jpg');
   }
   
   .outer_container {
@@ -14,6 +16,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/000/362/094/original/add-user-vector-icon.jpg');
   }
   
   .container h3 {

@@ -20,6 +20,7 @@ import { HoverDirective } from './Directives/hover.directive';
 import { ContactComponent } from './Components/contact/contact.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from 'src/material.module';
+import { EdituserprofileComponent } from './Components/edituserprofile/edituserprofile.component';
 // import { AuthModule} from  './auth/auth.module';
 
 
@@ -37,6 +38,7 @@ import { MaterialModule } from 'src/material.module';
     HighlightDirective,
     HoverDirective,
     ContactComponent,
+    EdituserprofileComponent,
     
     
   ],
