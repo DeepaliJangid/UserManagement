@@ -26,7 +26,7 @@ input.ng-invalid.ng-touched{
 body {
   margin: 0;
   padding: 0;
-  background-image: url('https://sharedassessments.org/wp-content/uploads/2017/05/White-Papers.jpg'); /* Adjust the path accordingly */
+  background-image: url('https://img.freepik.com/premium-vector/geometric-gradient-technology-background_23-2149110132.jpg?size=626&ext=jpg&ga=GA1.1.632798143.1705449600&semt=ais'); /* Adjust the path accordingly */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -90,7 +90,10 @@ button {
   transition: background-color 0.3s ease; /* Smooth transition on hover */
 }
 
-
+button:disabled {
+  background-color: #4bc2f1; /* Disabled button color */
+  cursor: not-allowed;
+}
 
 a {
   color: #000; /* Link color */

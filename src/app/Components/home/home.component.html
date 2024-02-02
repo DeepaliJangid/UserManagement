@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,30 +11,41 @@
             margin: 20px;
             background-image: url('https://i.ytimg.com/vi/_nJc87JKtxk/maxresdefault.jpg');
         }
+
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
         }
-        table, th, td {
+
+        table,
+        th,
+        td {
             border: 1px solid #ddd;
         }
-        th, td {
+
+        th,
+        td {
             padding: 12px;
             text-align: left;
         }
+
         th {
             background-color: #f2f2f2;
         }
+
         form {
             margin-top: 20px;
         }
-        input, button {
+
+        input,
+        button {
             padding: 10px;
             margin-right: 10px;
         }
     </style>
 </head>
+
 <body>
     <h2>User Management System</h2>
 
@@ -63,6 +74,23 @@
 
     <script>
         function addUser() {
+            this.service.postUser(this.addUser.value)
+                .subscribe(
+                    () => {
+                        this.toastr.success("user sent successfully");
+                        this.addUser.reset();
+                        this.router.navigate(['/fetchedusers'])
+                    },
+                    (error) => {
+                        console.error("Error");
+                        if (error.status === 500) {
+                            this.toastr.warning('Username already exists');
+                        } else {
+                            this.toastr.warning('Something went wrong!')
+                        }
+                    },
+
+                )
             var username = document.getElementById('username').value;
             var email = document.getElementById('email').value;
 
@@ -87,4 +115,5 @@
         }
     </script>
 </body>
+
 </html>

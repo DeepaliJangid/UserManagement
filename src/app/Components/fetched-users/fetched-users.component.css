@@ -18,6 +18,9 @@ body {
 
 h3 {
   color: #007bff;
+  text-align: center;
+  text-decoration:underline ;
+  height: 30;
 }
 
 .card {

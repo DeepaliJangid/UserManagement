@@ -17,7 +17,7 @@ const routes: Routes = [
   {path:'about',component:AboutComponent, title:"About"},
   {path:'navbar',component:NavbarComponent, title:"Navbar"},
   {path:'fetchedusers',component:FetchedUsersComponent, title:"FetchedUsers"},
-  {path:'adduser',component:AdduserComponent ,canActivate:[authGuard]}
+  {path:'adduser',component:AdduserComponent}
 ];
 
 @NgModule({

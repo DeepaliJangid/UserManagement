@@ -28,6 +28,7 @@ export class ApiService {
 
   // Variable to track login status
   loggedIn: boolean = false;
+  userData:any;
 
   // Method to set login status to true
   Login() {

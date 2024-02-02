@@ -17,6 +17,10 @@ import { ApiService } from './Services/api.service';
 import { UserService } from './Services/user.service';
 import { HighlightDirective } from './Directives/highlight.directive';
 import { HoverDirective } from './Directives/hover.directive';
+import { ContactComponent } from './Components/contact/contact.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from 'src/material.module';
+// import { AuthModule} from  './auth/auth.module';
 
 
 
@@ -32,6 +36,7 @@ import { HoverDirective } from './Directives/hover.directive';
     AdduserComponent,
     HighlightDirective,
     HoverDirective,
+    ContactComponent,
     
     
   ],
@@ -40,6 +45,7 @@ import { HoverDirective } from './Directives/hover.directive';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    MaterialModule,
     ReactiveFormsModule,
       ToastrModule.forRoot({
         timeOut: 10000,
@@ -52,6 +58,7 @@ import { HoverDirective } from './Directives/hover.directive';
         newestOnTop: true,
         toastClass:'toastr',
       }),
+      BrowserAnimationsModule,
       
     
   ],
