@@ -1,60 +1,79 @@
+/* Reset some default styles */
+* {
+  box-sizing: border-box;
+}
+
+/* Body styles */
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa;
-    background-image: url('https://static.vecteezy.com/system/resources/previews/000/362/094/original/add-user-vector-icon.jpg');
-  }
-  
-  .col-sm-8 {
-    margin: 20px auto;
-    background-image: url('https://static.vecteezy.com/system/resources/previews/000/362/094/original/add-user-vector-icon.jpg');
-  }
-  
-  .outer_container {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    background-image: url('https://static.vecteezy.com/system/resources/previews/000/362/094/original/add-user-vector-icon.jpg');
-  }
-  
-  .container h3 {
-    color: #007bff;
-  }
-  
-  form.container {
-    margin-top: 20px;
-  }
-  
-  .form-label {
-    font-weight: bold;
-  }
-  
-  .form-control {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ced4da;
-    border-radius: 4px;
-    box-sizing: border-box;
-    transition: border-color 0.3s ease-in-out;
-  }
-  
-  .form-control:focus {
-    border-color: #007bff;
-  }
-  
-  .btn-secondary {
-    background-color: #007bff;
-    color: #ffffff;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .btn-secondary:hover {
-    background-color: #0056b3;
-  }
-  
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-image: url('https://thumbs.dreamstime.com/z/hr-human-resources-management-concept-blurred-business-center-background-125613442.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Outer container styles */
+.outer_container {
+  background-color: white;
+  border-radius: 8px;
+  border-color: black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Container styles */
+.container {
+  text-align: center;
+}
+
+.container h3 {
+  color: #007bff;
+  font-size: 26px;
+}
+
+/* Form styles */
+form.container {
+  margin-top: 20px;
+}
+
+.form-label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+}
+
+/* Button styles */
+.btn-secondary {
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-secondary:hover {
+  background-color: #0056b3;
+}

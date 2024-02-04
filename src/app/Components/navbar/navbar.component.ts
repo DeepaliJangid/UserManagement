@@ -43,4 +43,8 @@ onClickLogin(){
 isLoggedIn(){
   return this.api.loggedIn;
 }
+
+isLoggedOut(){
+  return !this.isLoggedIn();
+}
 }

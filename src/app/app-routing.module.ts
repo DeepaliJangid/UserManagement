@@ -9,6 +9,7 @@ import { AdduserComponent } from './Components/adduser/adduser.component';
 import { authGuard } from './auth.guard';
 import { HomeComponent } from './Components/home/home.component';
 import { EdituserprofileComponent } from './Components/edituserprofile/edituserprofile.component';
+import { ContactComponent } from './Components/contact/contact.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -19,7 +20,8 @@ const routes: Routes = [
   {path:'navbar',component:NavbarComponent, title:"Navbar"},
   {path:'fetchedusers',component:FetchedUsersComponent, title:"FetchedUsers"},
   {path:'adduser',component:AdduserComponent},
-  {path:"edituserprofile",component:EdituserprofileComponent,canActivate:[authGuard]}
+  {path:"edituserprofile",component:EdituserprofileComponent,canActivate:[authGuard]},
+  {path:"contact",component:ContactComponent}
 ];
 
 @NgModule({

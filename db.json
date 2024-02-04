@@ -31,6 +31,14 @@
       "bio": "hehehe",
       "email": "bhens@gmail.com",
       "password": "Bhens@123"
+    },
+    {
+      "id": "ec73",
+      "user_type": "User",
+      "fullname": "Wasim ",
+      "bio": "I am Wasim Khan.",
+      "email": "wasimkhan@gmail.com",
+      "password": "Wasim@123"
     }
   ],
   "users": [
@@ -40,6 +48,14 @@
       "picture": "sdfg",
       "bio": "sdf",
       "interest": "sdf",
+      "role": null
+    },
+    {
+      "id": "4029",
+      "username": "Wasim",
+      "picture": "https://th.bing.com/th/id/OIP.82mzIgG1coA0EYcxMGv_-gHaEK?rs=1&pid=ImgDetMain",
+      "bio": "I am a medical student.",
+      "interest": "I like to play badminton.",
       "role": null
     }
   ],

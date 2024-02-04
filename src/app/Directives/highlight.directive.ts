@@ -9,7 +9,7 @@ export class HighlightDirective implements OnInit {
 
   ngOnInit(): void {
 
-    this.renderer.setStyle(this.element.nativeElement, 'background', 'LightPink');
+    this.renderer.setStyle(this.element.nativeElement, 'background', 'lightblue');
     this.renderer.addClass(this.element.nativeElement, 'container');
     this.renderer.setAttribute(this.element.nativeElement, 'title', 'Profile')
   

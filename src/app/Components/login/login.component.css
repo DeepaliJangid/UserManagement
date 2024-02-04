@@ -17,10 +17,11 @@ body {
 }
 
 .container {
-  max-width: 600px; /* Set max-width for better readability on larger screens */
+  max-width: 400px; /* Set max-width for better readability on larger screens */
 }
 
 .rowr {
+  margin-top:20px ;
   background-color: #ffffff; /* Set background color for the login box */
   padding: 20px; /* Add padding to the login box */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */

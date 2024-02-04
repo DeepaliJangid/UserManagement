@@ -42,6 +42,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 .card {
@@ -50,7 +51,8 @@ body {
   border-radius: 10px;
   padding: 20px;
   width: 100%;
-  max-width: 500px; /* Set a maximum width for the card */
+  max-width: 400px; /* Set a maximum width for the card */
+  margin-bottom: auto;
 }
 
 .text-center {

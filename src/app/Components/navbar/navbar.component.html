@@ -12,20 +12,12 @@
         <li class="nav-item" *ngIf="isLoggedIn()">
           <a class="nav-link" routerLink="/about">About</a>
         </li>
+        <li class="nav-item" *ngIf="isLoggedIn()">
+          <a class="nav-link" routerLink="/contact">Contact</a>
+        </li>
         <li class="nav-item active" *ngIf="isLoggedIn()">
           <a class="nav-link" routerLink="/adduser">addUser</a>
         </li>
-        <!-- <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li> -->
         <li class="nav-item" *ngIf="isLoggedIn()">
           <a class="nav-link " routerLink="/fetchedusers">All Users</a>
         </li>
@@ -34,16 +26,11 @@
           <a class="nav-link " routerLink="/edituserprofile">Edit Profile</a>
         </li>
       </ul>
-      <!-- <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form> -->
       <div class="my-2 my-lg-0">
         <div class="d-flex">
-          <button (click)="onClickLogin"  routerLink="/login" class="btn btn-primary mr-2">Login</button>&nbsp;
-          <button (click)="onClickSignUp" routerLink="/signup" class="btn btn-success">Signup</button>
-          <button (click)="logout()" class="btn btn-danger mx-2 " >Logout</button>
-          <!-- <button (click)="logout()" class="btn btn-danger mx-2">Logout</button> -->
+          <button (click)="onClickLogin"  routerLink="/login" class="btn btn-primary mr-2" *ngIf="isLoggedOut()">Login</button>&nbsp;
+          <button (click)="onClickSignUp" routerLink="/signup" class="btn btn-success" *ngIf="isLoggedOut()">Signup</button>
+          <button (click)="logout()" class="btn btn-danger mx-2 " *ngIf="isLoggedIn()">Logout</button>
         </div>
       </div>
     </div>
